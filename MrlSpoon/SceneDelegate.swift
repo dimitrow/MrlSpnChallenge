@@ -19,14 +19,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let entireScene = (scene as? UIWindowScene) else { return }
         
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.msGreen]
+        UINavigationBar.appearance().titleTextAttributes = attributes
+        
         let dataProvider = RecipesDataProvider()
         let startPointNavigationController = UINavigationController(rootViewController: RecipeListSceneCoordinator().initScene(dataProvider))
         
         window = UIWindow(frame: entireScene.coordinateSpace.bounds)
         window?.windowScene = entireScene
-        
+                
         window?.rootViewController = startPointNavigationController
         window?.makeKeyAndVisible()
+        
+                                 
+                    
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

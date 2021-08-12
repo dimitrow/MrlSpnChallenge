@@ -7,10 +7,8 @@
 
 import UIKit
 
-protocol RecipeListViewDelegate: AnyObject {
+protocol RecipeListViewDelegate: GenericViewDelegateProtocol, GenericFailureProtocol {
         
-    func operationFailed(_ error: Error)
-    func updateContent()
 }
 
 protocol RecipeListViewModelProtocol: AnyObject {

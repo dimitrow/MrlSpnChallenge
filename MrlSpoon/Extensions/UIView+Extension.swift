@@ -17,9 +17,4 @@ extension UIView {
         self.trailingAnchor.constraint(equalTo: superView.trailingAnchor).isActive = true
         self.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
     }
-    
-    func makeCornerRounded(with radius: CGFloat) {
-        
-        self.layer.cornerRadius = radius
-    }
 }

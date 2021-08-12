@@ -16,9 +16,8 @@ class RecipeListRecipeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
             
-        titleContainerView.backgroundColor = .white
+        titleContainerView.backgroundColor = .msYellow
         recipeTitleLabel.textColor = .msDarkText
-        titleContainerView.makeCornerRounded(with: 10)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

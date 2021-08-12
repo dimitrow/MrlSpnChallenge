@@ -9,5 +9,34 @@ import UIKit
 
 extension UIViewController {
     
-    //alert
+    func showAlert(title: String? = nil, message: String) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true)
+    }
 }
+
+protocol GenericFailureProtocol: AnyObject {
+    
+    func operationFailed(_ error: Error)
+}
+
+protocol GenericViewDelegateProtocol: AnyObject {
+    
+    func updateContent()
+}
+
+extension UIViewController: GenericFailureProtocol {
+    
+    func operationFailed(_ error: Error) {
+        
+        DispatchQueue.main.async { [weak self] in
+            
+            self?.showAlert(message: error.localizedDescription)
+        }
+    }
+}
+
+

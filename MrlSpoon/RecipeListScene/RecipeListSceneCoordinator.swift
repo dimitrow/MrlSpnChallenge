@@ -26,8 +26,9 @@ extension RecipeListSceneCoordinator: RecipeListCoordinatorProtocol {
         
         if let navigationController = self.viewController?.navigationController {
             
+            let detailsViewController = RecipeDetailsSceneCoordinator().initScene(recipe)
             
-            // navigationController – push to the details
+            navigationController.pushViewController(detailsViewController, animated: true)
         }
     }
 }

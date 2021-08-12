@@ -25,10 +25,9 @@ class RecipeListViewModel: RecipeListViewModelProtocol {
     func fetchRecipes() {
         
         dataProvider.fetchRecipes { [weak self] result in
-            
+                                    
             switch result {
             case .success(let recipes):
-                
                 self?.recipeList = recipes
                 self?.view?.updateContent()
                 break

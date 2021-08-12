@@ -22,7 +22,7 @@ class RecipeListViewController: UIViewController {
         return tableView
     }()
     
-    var viewModel: RecipeListViewModel?
+    var viewModel: RecipeListViewModelProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,24 +32,24 @@ class RecipeListViewController: UIViewController {
         view.addSubview(recipeTableView)
         recipeTableView.pin(to: view)
         viewModel?.fetchRecipes()
+        MBProgressHUD.showAdded(to: self.view, animated: true)
     }
 }
 
 extension RecipeListViewController: RecipeListViewDelegate {
-        
-    func operationFailed(_ error: Error) {
-        
-    }
-    
+            
     func updateContent() {
         
         DispatchQueue.main.async { [weak self] in
             
-            if let weakSelf = self {
+            if let weakSelf = self, let view = self?.view {
+                
+                MBProgressHUD.hide(for: view, animated: true)
                 
                 weakSelf.recipeTableView.delegate = weakSelf
                 weakSelf.recipeTableView.dataSource = weakSelf
                 weakSelf.recipeTableView.reloadData()
+                
             }
         }
     }
