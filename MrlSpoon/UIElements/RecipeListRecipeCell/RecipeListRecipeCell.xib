@@ -24,9 +24,9 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoG-iL-5o4">
-                        <rect key="frame" x="0.0" y="228" width="410" height="22"/>
+                        <rect key="frame" x="0.0" y="230" width="410" height="22"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc0-y7-QRx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc0-y7-QRx">
                                 <rect key="frame" x="8" y="2" width="394" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -48,7 +48,7 @@
                     <constraint firstAttribute="bottom" secondItem="aSV-Wf-d9V" secondAttribute="bottom" constant="10" id="HfH-ec-OY3"/>
                     <constraint firstItem="zoG-iL-5o4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Mar-M9-k2U"/>
                     <constraint firstAttribute="trailing" secondItem="zoG-iL-5o4" secondAttribute="trailing" id="h4n-o3-Ppf"/>
-                    <constraint firstAttribute="bottom" secondItem="zoG-iL-5o4" secondAttribute="bottom" constant="10" id="tLH-L7-1mz"/>
+                    <constraint firstAttribute="bottom" secondItem="zoG-iL-5o4" secondAttribute="bottom" constant="8" id="tLH-L7-1mz"/>
                     <constraint firstItem="aSV-Wf-d9V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wOs-VO-ktg"/>
                 </constraints>
             </tableViewCellContentView>

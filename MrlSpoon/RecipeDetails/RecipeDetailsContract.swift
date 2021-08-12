@@ -5,7 +5,7 @@
 //  Created by Gene Dimitrow on 12.08.21.
 //
 
-import Foundation
+import UIKit
 
 protocol RecipeDetailsViewDelegate: GenericViewDelegateProtocol, GenericFailureProtocol {
         
@@ -13,9 +13,9 @@ protocol RecipeDetailsViewDelegate: GenericViewDelegateProtocol, GenericFailureP
 
 protocol RecipeDetailsViewModelProtocol: AnyObject {
     
-    var recipe: Recipe { get set }
-    
-    func buildContent()
+//    var recipe: Recipe { get set }
+    var recipeDetailedCells: [UITableViewCell] { get set}
+    func buildContent(for tableView: UITableView)
 }
 
 protocol RecipeDetailsCoordinatorProtocol: AnyObject {

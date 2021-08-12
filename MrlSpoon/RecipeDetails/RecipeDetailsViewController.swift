@@ -16,6 +16,9 @@ class RecipeDetailsViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         
+        tableView.register(UINib.init(nibName: RecipeMainCell.identifier, bundle: nil), forCellReuseIdentifier: RecipeMainCell.identifier)
+        tableView.register(UINib.init(nibName: RecipeDescriptionCell.identifier, bundle: nil), forCellReuseIdentifier: RecipeDescriptionCell.identifier)
+        tableView.register(UINib.init(nibName: RecipeTagListCell.identifier, bundle: nil), forCellReuseIdentifier: RecipeTagListCell.identifier)
         
         return tableView
     }()
@@ -29,7 +32,7 @@ class RecipeDetailsViewController: UIViewController {
         view.backgroundColor = .msBackground
         view.addSubview(recipeTableView)
         recipeTableView.pin(to: view)
-        viewModel?.buildContent()
+        viewModel?.buildContent(for: recipeTableView)
     }
     
 }
@@ -38,5 +41,8 @@ extension RecipeDetailsViewController: RecipeDetailsViewDelegate {
             
     func updateContent() {
         
+        recipeTableView.delegate = self
+        recipeTableView.dataSource = self
+        recipeTableView.reloadData()
     }
 }
