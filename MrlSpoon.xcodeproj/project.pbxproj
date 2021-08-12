@@ -123,9 +123,7 @@
 		B049DFCD26C312B700B8DFF2 /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
-				B049DFEA26C3175A00B8DFF2 /* RecipeListRecipeCell.xib */,
-				B049DFE926C3175A00B8DFF2 /* RecipeListRecipeCell.swift */,
-				B049DFEB26C3175A00B8DFF2 /* RecipeListRecipeCellBuilder.swift */,
+				B049DFF826C5744500B8DFF2 /* RecipeListRecipeCell */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -146,6 +144,16 @@
 				B049DFF626C55BBD00B8DFF2 /* RecipeDetailsContract.swift */,
 			);
 			path = RecipeDetails;
+			sourceTree = "<group>";
+		};
+		B049DFF826C5744500B8DFF2 /* RecipeListRecipeCell */ = {
+			isa = PBXGroup;
+			children = (
+				B049DFEA26C3175A00B8DFF2 /* RecipeListRecipeCell.xib */,
+				B049DFE926C3175A00B8DFF2 /* RecipeListRecipeCell.swift */,
+				B049DFEB26C3175A00B8DFF2 /* RecipeListRecipeCellBuilder.swift */,
+			);
+			path = RecipeListRecipeCell;
 			sourceTree = "<group>";
 		};
 		B08731D226C30964007947AA = {

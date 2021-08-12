@@ -18,7 +18,6 @@ final class Recipe: EntryDecodable, FieldKeysQueryable, Resource {
     
     let title: String?
     var photo: Asset?
-    let calories: Int?
     let description: String?
     
     //MARK: -  relationship fields
@@ -29,7 +28,6 @@ final class Recipe: EntryDecodable, FieldKeysQueryable, Resource {
     enum FieldKeys: String, CodingKey {
         case title
         case photo
-        case calories
         case description
         case chef
         case tags
@@ -42,7 +40,6 @@ final class Recipe: EntryDecodable, FieldKeysQueryable, Resource {
         let fields = try decoder.contentfulFieldsContainer(keyedBy: Recipe.FieldKeys.self)
         
         self.title = try fields.decodeIfPresent(String.self, forKey: .title)
-        self.calories = try fields.decodeIfPresent(Int.self, forKey: .calories)
         self.description = try fields.decodeIfPresent(String.self, forKey: .description)
         
         try fields.resolveLink(forKey: .photo, decoder: decoder) { [weak self] photo in
