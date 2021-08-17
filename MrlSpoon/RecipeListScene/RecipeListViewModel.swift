@@ -10,8 +10,8 @@ import UIKit
 class RecipeListViewModel: RecipeListViewModelProtocol {
         
     weak var view: RecipeListViewDelegate?
-    private var coordinator: RecipeListCoordinatorProtocol
-    private var dataProvider: RecipesDataProvider
+    private let coordinator: RecipeListCoordinatorProtocol
+    private let dataProvider: RecipesDataProvider
     
     var recipeList: [Recipe] = []
     

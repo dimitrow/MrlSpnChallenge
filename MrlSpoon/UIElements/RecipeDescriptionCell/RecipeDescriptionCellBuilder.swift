@@ -11,8 +11,8 @@ class RecipeDescriptionCellBuilder {
     
     func buildCell(for tableView: UITableView, recipe: Recipe) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: RecipeDescriptionCell.identifier) as! RecipeDescriptionCell
-        cell.descriptionLabel.text = recipe.description 
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RecipeDescriptionCell.identifier) as? RecipeDescriptionCell
+        cell?.descriptionLabel.text = recipe.description
+        return cell ?? UITableViewCell()
     }
 }

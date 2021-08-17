@@ -30,10 +30,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 
         window?.rootViewController = startPointNavigationController
         window?.makeKeyAndVisible()
-        
-                                 
-                    
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -28,6 +28,10 @@ class RecipeListViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "Recipes"
+        
+        recipeTableView.delegate = self
+        recipeTableView.dataSource = self
+        
         view.backgroundColor = .msBackground
         view.addSubview(recipeTableView)
         recipeTableView.pin(to: view)
@@ -45,9 +49,6 @@ extension RecipeListViewController: RecipeListViewDelegate {
             if let weakSelf = self, let view = self?.view {
                 
                 MBProgressHUD.hide(for: view, animated: true)
-                
-                weakSelf.recipeTableView.delegate = weakSelf
-                weakSelf.recipeTableView.dataSource = weakSelf
                 weakSelf.recipeTableView.reloadData()
                 
             }

@@ -13,7 +13,6 @@ protocol RecipeDetailsViewDelegate: GenericViewDelegateProtocol, GenericFailureP
 
 protocol RecipeDetailsViewModelProtocol: AnyObject {
     
-//    var recipe: Recipe { get set }
     var recipeDetailedCells: [UITableViewCell] { get set}
     func buildContent(for tableView: UITableView)
 }

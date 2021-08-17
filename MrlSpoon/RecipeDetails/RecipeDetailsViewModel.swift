@@ -20,7 +20,7 @@ class RecipeDetailsViewModel: RecipeDetailsViewModelProtocol {
     
     weak var view: RecipeDetailsViewDelegate?
     
-    private var recipe: Recipe
+    private let recipe: Recipe
     var recipeDetailedCells: [UITableViewCell] = []
     
     init(view: RecipeDetailsViewDelegate, recipe: Recipe) {

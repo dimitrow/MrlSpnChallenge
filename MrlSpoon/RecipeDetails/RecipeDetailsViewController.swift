@@ -29,6 +29,10 @@ class RecipeDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "Recipe Details"
+        
+        recipeTableView.delegate = self
+        recipeTableView.dataSource = self
+        
         view.backgroundColor = .msBackground
         view.addSubview(recipeTableView)
         recipeTableView.pin(to: view)
@@ -41,8 +45,6 @@ extension RecipeDetailsViewController: RecipeDetailsViewDelegate {
             
     func updateContent() {
         
-        recipeTableView.delegate = self
-        recipeTableView.dataSource = self
         recipeTableView.reloadData()
     }
 }
